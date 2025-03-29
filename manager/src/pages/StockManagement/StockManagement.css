@@ -1,0 +1,110 @@
+/* Container Styling */
+.stock-container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading */
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  /* Form Styling */
+  .form-container1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .form-container1 input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .form-container1 button {
+    grid-column: span 2;
+    padding: 10px;
+    background: #ffe5e5;
+    color: black;
+    border: 1px solid #ed3d3d;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+  }
+  
+  .form-container1 button:hover {
+    background: #f9a6a6;
+  }
+  
+  /* Table Styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  th {
+    background: #343a40;
+    color: white;
+  }
+  
+  /* Low Stock Alert */
+  .low-stock {
+    background: #ffe5e5;
+    color: red;
+    font-weight: bold;
+  }
+  
+  /* Action Buttons */
+  td button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  td .delete-btn {
+    background: #dc3545;
+    color: white;
+  }
+  
+  td .delete-btn:hover {
+    background: #c82333;
+  }
+
+
+  .edit-btn {
+    background: #ffc107;
+    color: black;
+    margin-right: 5px;
+  }
+  
+  .edit-btn:hover {
+    background: #e0a800;
+  }
+  
+  
