@@ -6,7 +6,6 @@ const Login = () => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
-    role: 'admin' // default to admin
   });
   const navigate = useNavigate();
 

@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 
 export const connectDB = async () => {
   await mongoose
-    .connect(process.env.MONGO_URI)
+    .connect("mongodb+srv://CafeCrush:12345@cluster0.qiu3t.mongodb.net/food-del")
     .then((host) => console.log("DB Connected on port", host.connection.host));
 };
 
