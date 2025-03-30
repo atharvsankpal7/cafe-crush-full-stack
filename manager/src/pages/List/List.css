@@ -13,6 +13,10 @@
 .list-table-format img{
     width: 50px;
 }
+.list-action{
+    display: flex;
+    gap: 15px;
+}
 @media(max-width:600px){
 
     .list-table-format{

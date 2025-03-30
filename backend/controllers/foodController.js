@@ -4,7 +4,8 @@ import fs from 'fs'
 // all food list
 const listFood = async (req, res) => {
     try {
-        const foods = await foodModel.find({})
+        const foods = await foodModel.find()
+        
         res.json({ success: true, data: foods })
     } catch (error) {
         console.log(error);
@@ -52,9 +53,19 @@ const removeFood = async (req, res) => {
 
 }
 
-
+const updateAvailable = async (req, res) => {
+    try {
+        const food = await foodModel.findById(req.body.id);
+        food.available = !food.available;
+        await food.save();
+        res.json({ success: true, message: "Food Updated" })
+    } catch (error) {
+        console.log(error);
+        res.json({ success: false, message: "Error" })
+    }
+}
 
 
 
 // Export all functions
-export { listFood, addFood, removeFood };
+export { listFood, addFood, removeFood, updateAvailable };

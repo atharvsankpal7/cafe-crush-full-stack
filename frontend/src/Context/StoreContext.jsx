@@ -10,7 +10,7 @@ const StoreContextProvider = (props) => {
     const [cartItems, setCartItems] = useState({});
     const [token, setToken] = useState("")
     const currency = "₹";
-    const deliveryCharge = 50;
+    const deliveryCharge = 0;
 
     const addToCart = async (itemId) => {
         if (!cartItems[itemId]) {
@@ -49,7 +49,7 @@ const StoreContextProvider = (props) => {
 
     const fetchFoodList = async () => {
         const response = await axios.get(url + "/api/food/list");
-        setFoodList(response.data.data)
+        setFoodList(response.data.data.filter((item) => item.available))
     }
 
     const loadCartData = async (token) => {
