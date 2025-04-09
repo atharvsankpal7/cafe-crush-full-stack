@@ -27,13 +27,22 @@
     font-weight: 500;
     color: #454545;
 }
-.my-orders button{
+.order-actions {
+    display: flex;
+    gap: 10px;
+}
+.order-actions button{
     border: none;
-    padding: 12px 0px;
+    padding: 8px 12px;
     border-radius: 4px;
     background-color: #FFE1E1;
     cursor: pointer;
     color: #454545;
+    font-size: 12px;
+}
+.order-actions button:last-child {
+    background-color: #4CAF50;
+    color: white;
 }
 @media (max-width:900px) {
     .my-orders-order{
@@ -41,8 +50,10 @@
         row-gap: 5px;
         font-size: 12px;
     }
-    .my-orders-order button{
+    .order-actions {
+        flex-direction: column;
+    }
+    .order-actions button{
         font-size: 10px;
     }
-    
 }

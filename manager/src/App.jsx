@@ -7,18 +7,21 @@ import List from './pages/List/List'
 import Orders from './pages/Orders/Orders'
 import StockManagement from './pages/StockManagement/StockManagement'
 import Login from './pages/Login/Login'
+
 import NotFound from './pages/NotFound/NotFound'
+import Reviews from './pages/Reviews/Reviews'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import Sales from '../../admin/src/pages/Sales/Sales'
 
 // Protected Layout Component
 const ProtectedLayout = () => {
   const isAuthenticated = localStorage.getItem('token')
-  
+
   if (!isAuthenticated) {
     return <Navigate to="/login" replace />
   }
-  
+
   return (
     <>
       <Navbar />
@@ -37,13 +40,16 @@ const App = () => {
       <ToastContainer />
       <Routes>
         <Route path="/login" element={<Login />} />
-        
+
         <Route element={<ProtectedLayout />}>
           <Route index element={<Navigate to="/add" replace />} />
           <Route path="add" element={<Add />} />
           <Route path="list" element={<List />} />
           <Route path="orders" element={<Orders />} />
           <Route path="stock-management" element={<StockManagement />} />
+          <Route path="sales" element={<Sales />} />
+          <Route path="review" element={<Reviews />} />
+
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
